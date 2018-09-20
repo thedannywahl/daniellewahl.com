@@ -6,7 +6,15 @@
   }
 }
 
-@media screen and (max-width: 736px), screen and (orientation: portrait) {
+@include breakpoint("<=small") {
+  #contactform {
+    height: initial;
+    iframe {
+      min-height: 500px;
+    }
+  }
+}
+@include orientation("portrait") {
   #contactform {
     height: initial;
     iframe {

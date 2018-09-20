@@ -3328,7 +3328,25 @@ button:disabled,
     flex-basis: 40%;
   }
 }
-@media screen and (max-width: 736px) and (orientation: portrait) {
+@media screen and (orientation: portrait) {
+  .panel.banner .content {
+    padding: 2.8875rem 1.75rem 1.3875rem 1.75rem;
+    -moz-flex-basis: 60%;
+    -webkit-flex-basis: 60%;
+    -ms-flex-basis: 60%;
+    flex-basis: 60%;
+  }
+  .panel.banner .content > .actions:last-child {
+    margin-bottom: 1.5rem;
+  }
+  .panel.banner .image {
+    -moz-flex-basis: 40%;
+    -webkit-flex-basis: 40%;
+    -ms-flex-basis: 40%;
+    flex-basis: 40%;
+  }
+}
+@media screen and (orientation: portrait) and (orientation: portrait) {
   .panel.banner .content {
     -moz-flex-basis: auto;
     -webkit-flex-basis: auto;
@@ -3652,7 +3670,15 @@ body.is-preload #wrapper {
   width: 100%;
 }
 
-@media screen and (max-width: 736px), screen and (orientation: portrait) {
+@media screen and (max-width: 736px) {
+  #contactform {
+    height: initial;
+  }
+  #contactform iframe {
+    min-height: 500px;
+  }
+}
+@media screen and (orientation: portrait) {
   #contactform {
     height: initial;
   }
