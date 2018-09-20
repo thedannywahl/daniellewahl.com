@@ -1,0 +1,30 @@
+#contactform {
+  height: 100%;
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 736px), screen and (orientation: portrait) {
+  #contactform {
+    height: initial;
+    iframe {
+      min-height: 500px;
+    }
+  }
+  #wrapper {
+    @include vendor("flex-direction", "column");
+    height: auto;
+    margin: 0 0 5rem 0;
+    box-shadow: 0 0.25rem 1.5rem 0.25rem transparentize(_palette(bg), 0.5);
+
+    > .scrollZone {
+      display: none;
+    }
+
+    body.is-preload & {
+      @include vendor("transform", "translateY(1rem)");
+    }
+  }
+}
