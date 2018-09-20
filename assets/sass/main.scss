@@ -65,7 +65,6 @@
   @if ($tint) {
     $x: linear-gradient(0deg, rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125));
     $y: auto;
-
     $background-image: append($background-image, $x);
     $background-size: append($background-size, $y);
   }
@@ -125,16 +124,16 @@
 @import "base/page";
 @import "base/typography";
 // Component.
-// @import "components/form";
+@import "components/form";
 @import "components/icon";
 @import "components/image";
 @import "components/list";
 @import "components/actions";
 @import "components/icons";
-// @import "components/grid-icons";
+@import "components/grid-icons";
 @import "components/contact-icons";
-// @import "components/table";
-// @import "components/button";
+@import "components/table";
+@import "components/button";
 @import "components/gallery";
 @import "components/panel";
 @import "components/panel-banner";
