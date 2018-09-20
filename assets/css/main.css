@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "font-awesome.min.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300i,400i");
 /*
 	Ethereal by HTML5 UP
@@ -1712,6 +1712,146 @@ button:disabled,
   }
 }
 @media screen and (max-width: 736px) {
+  .gallery {
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+  .gallery > * {
+    height: auto;
+    width: 100%;
+  }
+  .gallery .image {
+    width: 100%;
+    height: 40rem;
+  }
+  .gallery .group .span-0-25 {
+    width: 8.3333325%;
+  }
+  .gallery .group .span-0-5 {
+    width: 16.666665%;
+  }
+  .gallery .group .span-0-75 {
+    width: 24.9999975%;
+  }
+  .gallery .group .span-1 {
+    width: 33.33333%;
+  }
+  .gallery .group .span-1-25 {
+    width: 41.6666625%;
+  }
+  .gallery .group .span-1-5 {
+    width: 49.999995%;
+  }
+  .gallery .group .span-1-75 {
+    width: 58.3333275%;
+  }
+  .gallery .group .span-2 {
+    width: 66.66666%;
+  }
+  .gallery .group .span-2-25 {
+    width: 74.9999925%;
+  }
+  .gallery .group .span-2-5 {
+    width: 83.333325%;
+  }
+  .gallery .group .span-2-75 {
+    width: 91.6666575%;
+  }
+  .gallery .group .span-3 {
+    width: 99.99999%;
+  }
+  .gallery .group .span-3-25 {
+    width: 108.3333225%;
+  }
+  .gallery .group .span-3-5 {
+    width: 116.666655%;
+  }
+  .gallery .group .span-3-75 {
+    width: 124.9999875%;
+  }
+  .gallery .group .span-4 {
+    width: 133.33332%;
+  }
+  .gallery .group .span-4-25 {
+    width: 141.6666525%;
+  }
+  .gallery .group .span-4-5 {
+    width: 149.999985%;
+  }
+  .gallery .group .span-4-75 {
+    width: 158.3333175%;
+  }
+  .gallery .group .span-5 {
+    width: 166.66665%;
+  }
+  .gallery .group .span-5-25 {
+    width: 174.9999825%;
+  }
+  .gallery .group .span-5-5 {
+    width: 183.333315%;
+  }
+  .gallery .group .span-5-75 {
+    width: 191.6666475%;
+  }
+  .gallery .group .span-6 {
+    width: 199.99998%;
+  }
+  .gallery .group .span-6-25 {
+    width: 208.3333125%;
+  }
+  .gallery .group .span-6-5 {
+    width: 216.666645%;
+  }
+  .gallery .group .span-6-75 {
+    width: 224.9999775%;
+  }
+  .gallery .group .span-7 {
+    width: 233.33331%;
+  }
+  .gallery .group .span-7-25 {
+    width: 241.6666425%;
+  }
+  .gallery .group .span-7-5 {
+    width: 249.999975%;
+  }
+  .gallery .group .span-7-75 {
+    width: 258.3333075%;
+  }
+  .gallery .group .span-8 {
+    width: 266.66664%;
+  }
+  .gallery .group .span-8-25 {
+    width: 274.9999725%;
+  }
+  .gallery .group .span-8-5 {
+    width: 283.333305%;
+  }
+  .gallery .group .span-8-75 {
+    width: 291.6666375%;
+  }
+  .gallery .group .span-9 {
+    width: 299.99997%;
+  }
+  .gallery .group .span-9-25 {
+    width: 308.3333025%;
+  }
+  .gallery .group .span-9-5 {
+    width: 316.666635%;
+  }
+  .gallery .group .span-9-75 {
+    width: 324.9999675%;
+  }
+  .gallery .group .span-10 {
+    width: 333.3333%;
+  }
+  .gallery .group .image {
+    height: 20rem;
+  }
+}
+@media screen and (orientation: portrait) {
   .gallery {
     -moz-flex-direction: column;
     -webkit-flex-direction: column;
