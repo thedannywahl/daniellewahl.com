@@ -137,7 +137,7 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoint("<=medium") {
 			@include vendor('justify-content', 'flex-start');
 			width: 100% !important;
 			margin: -1rem 0 _size(element-margin) -1rem;

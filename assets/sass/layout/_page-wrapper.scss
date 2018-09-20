@@ -29,7 +29,7 @@
 		}
 	}
 
-	@include breakpoint('<=small') {
+	@include breakpoint("<=medium") {
 		#page-wrapper {
 			height: auto;
 			padding: 1rem;

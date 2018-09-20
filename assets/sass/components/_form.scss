@@ -41,7 +41,7 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoint("<=medium") {
 			> .fields {
 				$gutter: (_size(element-margin) * 0.75);
 

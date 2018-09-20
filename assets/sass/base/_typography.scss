@@ -202,7 +202,7 @@
 		text-align: right;
 	}
 
-	@include breakpoint('<=small') {
+	@include breakpoint("<=medium") {
 		html {
 			font-size: 12pt;
 		}

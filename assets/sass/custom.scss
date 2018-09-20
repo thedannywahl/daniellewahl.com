@@ -5,20 +5,23 @@
     width: 100%;
   }
 }
+#newborn {
+  cite {
+    text-align: right;
+    display: block;
+  }
+}
 
 @include breakpoint("<=small") {
   #contactform {
     height: initial;
     iframe {
-      min-height: 500px;
+      min-height: 565px;
     }
   }
-}
-@include orientation("portrait") {
-  #contactform {
-    height: initial;
-    iframe {
-      min-height: 500px;
+  #newborn {
+    cite {
+      text-align: center;
     }
   }
 }

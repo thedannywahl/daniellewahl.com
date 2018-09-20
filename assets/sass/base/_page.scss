@@ -98,7 +98,7 @@
 
 	}
 
-	@include breakpoint('<=small') {
+	@include breakpoint("<=medium") {
 		html {
 			height: auto;
 		}
