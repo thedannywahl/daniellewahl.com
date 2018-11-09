@@ -14,6 +14,17 @@
     display: block;
   }
 }
+nav {
+  position: fixed;
+  top: 2.5em;
+  left: 5em;
+  color: #000;
+
+}
+nav li {
+  display: inline;
+  margin-right: 1em;
+}
 
 @include breakpoint("<=small") {
   #contactform {
@@ -31,4 +42,8 @@
       text-align: center;
     }
   }
+}
+
+.scrollZone {
+  display:none;
 }
