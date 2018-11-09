@@ -18,12 +18,25 @@ nav {
   position: fixed;
   top: 2.5em;
   left: 5em;
-  color: #000;
-
+  z-index: 1;
 }
 nav li {
   display: inline;
   margin-right: 1em;
+}
+
+@include breakpoint("<=medium") {
+  nav {
+    position: initial;
+    background:#fff;
+    text-align: center;
+  }
+  nav li .button {
+    border-radius: 0;
+		height: _size(element-height) * 1!important;
+		line-height: _size(element-height) * 1!important;
+		padding: 0 1.25rem!important;
+  }
 }
 
 @include breakpoint("<=small") {
@@ -42,7 +55,17 @@ nav li {
       text-align: center;
     }
   }
+  nav li {
+    margin: 0;
+  }
+  nav li .button {
+		font-size: 0.6rem!important;
+		padding: 0 1rem!important;
+		height: _size(element-height) * 0.75!important;
+		line-height: _size(element-height) * 0.75!important;
+  }
 }
+
 
 .scrollZone {
   display:none;
