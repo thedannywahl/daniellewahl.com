@@ -14,10 +14,8 @@ const toggleActive = (id) => {
   ]
   c.forEach((el, i) => {
     let h = document.getElementsByTagName('h1')[0]
-    console.log(el)
     if(el === null) return
     if(id === "contact") {
-      console.log('contact clicked!')
       h.classList.remove('active')
     } else {
       h.classList.add('active')
