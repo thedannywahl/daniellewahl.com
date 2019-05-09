@@ -90,7 +90,9 @@ h2 .title {
 	font-family: 'Great Vibes', serif;
 	font-size: 1.55em;
 }
-
+.copy {
+	color: #aaa;
+}
 nav {
 	position: fixed;
 	bottom: 0;
