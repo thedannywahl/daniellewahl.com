@@ -179,10 +179,9 @@ nav {
   0%, 17%  { z-index: 2; }
 	17, 100%  { z-index: 1; }
 
-	0%, 100% { transform: scale(1); }
+	0%, 100% { transform: scale(1); opacity: 0; }
 	17%, 83% { transform: scale(1.2); }
 
-  0%, 100% { opacity: 0; }
   4%, 17% { opacity: 1; }
   34%, 83% { opacity: 0; }
 }
