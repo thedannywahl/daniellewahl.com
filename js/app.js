@@ -1,4 +1,4 @@
-const toggleActive = (id) => {
+const toggleActive = id => {
   let els = [
     document.querySelectorAll('[role="navigation"] a'),
     document.querySelectorAll('[role="region"]')
@@ -13,7 +13,7 @@ const toggleActive = (id) => {
     document.querySelector(`[aria-label="${id}"]`)
   ]
   let h = document.getElementsByTagName('h1')[0]
-  c.forEach((el) => {
+  c.forEach(el => {
     if(el === null) return
     if(id === "contact") {
       h.classList.remove('active')
@@ -24,8 +24,6 @@ const toggleActive = (id) => {
   })
   let t = id === "contact" ? "photography" : id
   document.getElementsByClassName('title')[0].innerHTML = t
-  document.title = t.charAt(0).toUpperCase() + t.slice(1) + " by Danielle Wahl"
+  document.title = `${t.charAt(0).toUpperCase() + t.slice(1)} by Danielle Wahl`
 }
-
-let dl = document.location.href.split('#')[1]
-if(dl !== undefined) toggleActive(dl)
+if(document.location.href.split('#')[1] !== undefined) toggleActive(dl)
