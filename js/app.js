@@ -12,8 +12,8 @@ const toggleActive = (id) => {
     document.getElementById(id),
     document.querySelector(`[aria-label="${id}"]`)
   ]
-  c.forEach((el, i) => {
-    let h = document.getElementsByTagName('h1')[0]
+  let h = document.getElementsByTagName('h1')[0]
+  c.forEach((el) => {
     if(el === null) return
     if(id === "contact") {
       h.classList.remove('active')
@@ -28,4 +28,4 @@ const toggleActive = (id) => {
 }
 
 let dl = document.location.href.split('#')[1]
-if(dl !== undefined) { toggleActive(dl) }
+if(dl !== undefined) toggleActive(dl)
