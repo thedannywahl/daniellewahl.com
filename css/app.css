@@ -185,7 +185,7 @@ nav {
   4%, 17% { opacity: 1; }
   34%, 83% { opacity: 0; }
 }
-@media (width <= 38em) {
+@media (width <= 610px) {
 	[role="menuitem"] {
 		font-size: smaller;
 		padding: 0 0.5em 0.25em;
