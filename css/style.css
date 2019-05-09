@@ -50,6 +50,7 @@ h1 .author {
 [aria-label="contact"] {
 	height: calc(100% - 4.5em);
 	z-index: 1;
+	visibility: hidden;
 }
 [aria-label="contact"] div {
 	max-width: 28em;
