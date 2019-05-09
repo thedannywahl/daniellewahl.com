@@ -193,7 +193,7 @@ nav {
 	34%, 83% { opacity: 0; }
 }
 
-@media (width <= 32em) {
+@media (width <= 38em) {
 	[role="menuitem"] {
 		font-size: smaller;
 		padding: 0 0.5em 0.25em;
@@ -206,6 +206,7 @@ nav {
 	}
 	h1 .author {
 		font-size: 3rem;
+		white-space: nowrap;
 	}
 	[aria-label="contact"] div {
 		width: calc(100% - 8em);
