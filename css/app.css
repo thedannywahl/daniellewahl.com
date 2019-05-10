@@ -224,3 +224,29 @@ nav {
 		color: #fff;
 	}
 }
+@media (prefers-reduced-motion: reduce) {
+	[class^="slide"] {
+		animation: none;
+	}
+	h1,
+	[role="region"] {
+		transition: opacity 0s;
+	}
+}
+@media (prefers-reduced-transparency: reduce) {
+	h1,
+	h1 .title,
+	h1 span {
+		opacity: 1;
+	}
+	[aria-label="contact"] div,
+	nav {
+		background: #fff;
+	}
+}
+@media (prefers-reduced-transparency: reduce) and (prefers-color-scheme: dark) {
+	[aria-label="contact"] div,
+	nav {
+		background: #000;
+	}
+}
