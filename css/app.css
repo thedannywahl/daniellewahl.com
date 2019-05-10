@@ -138,6 +138,7 @@ nav {
 	display: inline-block;
 	opacity: 0;
 	z-index: 1;
+	color: transparent;
 }
 
 [class^="slide"] img {
