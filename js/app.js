@@ -9,7 +9,7 @@ const toggleActive = id => {
     })
   })
   let c = [
-    document.getElementById(id),
+    document.querySelector(`[href="#${id}"]`),
     document.querySelector(`[aria-label="${id}"]`)
   ]
   let h = document.getElementsByTagName('h1')[0]

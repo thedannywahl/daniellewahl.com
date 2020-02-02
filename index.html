@@ -10,7 +10,7 @@
 	<script async src="js/app.min.js"></script>
 	<section role="main">
 		<h1 role="banner" class="active"><span class="title">Photography</span> <span>by</span> <span class="author">Danielle</span></h1>
-		<section role="region" aria-label="contact">
+		<section role="region" id="contact" aria-label="contact">
 			<div>
 				<h2><span class="title">Hi,</span> I'm Danielle Wahl.</h2>
 				<p>I'm a photographer serving Utah and its surrounding areas.  I'm passionate about boudoir, motherhood, and strong, confident women.  Below are some ways to contact me or view more of my work.
@@ -26,12 +26,12 @@
 		</section>
 	</section>
 	<nav role="navigation">
-		<a href="#boudoir" id="boudoir" role="menuitem" onclick="toggleActive('boudoir');lazyLoadInstance.update();">Boudoir</a>
+		<a href="#boudoir" role="menuitem" onclick="toggleActive('boudoir');lazyLoadInstance.update();">Boudoir</a>
 		<a href="#maternity" id="maternity" role="menuitem" onclick="toggleActive('maternity');lazyLoadInstance.update();">Maternity</a>
 		<a href="#portraiture" id="portraiture" role="menuitem" onclick="toggleActive('portraiture');lazyLoadInstance.update();">Portraiture</a>
 		<a href="#contact" id="contact" role="menuitem" onclick="toggleActive('contact');lazyLoadInstance.update();">Contact</a>
 	</nav>
-	<ul role="region" aria-label="boudoir">
+	<ul role="region" id="boudoir" aria-label="boudoir">
 		<li class="slide1">
 			<picture>
 				<source type="image/webp" data-srcset="images/boudoir/boudoir01.webp">
@@ -63,7 +63,7 @@
 				<img data-src="images/boudoir/boudoir06.jpg" alt="boudoir06">
 			</picture>
 	</ul>
-	<ul role="region" aria-label="maternity">
+	<ul role="region" id="maternity" aria-label="maternity">
 		<li class="slide1">
 			<picture>
 				<source type="image/webp" data-srcset="images/maternity/maternity01.webp">
@@ -95,7 +95,7 @@
 				<img data-src="images/maternity/maternity06.jpg" alt="maternity06">
 			</picture>
 	</ul>
-	<ul role="region" aria-label="portraiture">
+	<ul role="region" id="portraiture" aria-label="portraiture">
 		<li class="slide1">
 			<picture>
 				<source type="image/webp" data-srcset="images/portraiture/portraiture01.webp">
