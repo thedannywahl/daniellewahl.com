@@ -1,0 +1,252 @@
+body {
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background: transparent url('../images/template/bg.jpg') no-repeat left top / cover;
+	font-family: 'Montserrat', sans-serif;
+}
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.group {
+  opacity: 0;
+  position: fixed;
+	top: 0;
+	z-index: -1;
+  width: 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	transition: opacity 1.75s linear 0.25s;
+}
+h1 {
+	margin: 0;
+	font-size: 3rem;
+	font-weight: 400;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 2s ease;
+	text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, 1px 1px 0 #fff;
+}
+h1 span {
+	opacity: 0.66;
+}
+.title {
+	color: rgb(244, 68, 175);
+	font-family: 'Great Vibes', serif;
+	text-transform: capitalize;
+}
+h1 .title {
+	font-size: 6rem;
+	opacity: 0.85;
+}
+h1 .author {
+	font-size: 4rem;
+}
+#contact {
+	height: calc(100% - 4.5em);
+	z-index: 1;
+	visibility: hidden;
+}
+#contact div {
+	max-width: 28em;
+	background: rgba(255, 255, 255, 0.75);
+	margin: 8em auto 0;
+	border-radius: 3px;
+	height: calc(100% - 24em);
+	min-height: calc(100% - 14em);
+	border: 3px solid #fff;
+	overflow-y: scroll;
+	padding: 1em;
+}
+#contact a {
+	color: rgb(156, 181, 229);
+	text-decoration: none;
+}
+#contact a:hover,
+#contact a:focus,
+#contact a:active {
+	border-bottom: 1px dashed currentColor;
+}
+#contact ul {
+	list-style: none outside none;
+	border-top: 1px dashed #ddd;
+	border-bottom: 1px dashed #ddd;
+	padding: 1em 0;
+}
+#contact li {
+	line-height: 1.75em;
+}
+h2 {
+	font-weight: 400;
+}
+h2 .title {
+	font-size: 1.55em;
+}
+.copy {
+	color: #aaa;
+}
+nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.75);
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+nav a {
+	display: inline-block;
+	padding: 0 1em 0.5em;
+	text-decoration: none;
+	display: inline-block;
+	color: #000;
+	height: 3.5em;
+	line-height: 3.5em;
+	text-transform: uppercase;
+	border-top: 0.5em solid transparent;
+}
+nav a:hover,
+nav a:focus {
+	border-top-color: rgb(244, 68, 175);
+}
+nav a:active,
+nav a.active {
+  border-top-color: rgb(156, 181, 229)
+}
+nav a:last-child {
+	float: right;
+}
+.active {
+	opacity: 1;
+	visibility: visible!important;
+}
+
+[class^="slide"] {
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0,0,0);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	opacity: 0;
+	z-index: 1;
+	color: transparent;
+}
+
+[class^="slide"] img {
+  width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slide1 {
+  transform-origin: 100% 0;
+	animation: zoom 48s infinite -2s linear;
+
+}
+.slide2 {
+  transform-origin: 0 0;
+  animation: zoom 48s infinite 6s linear;
+
+}
+.slide3 {
+  transform-origin: 100% 100%;
+	animation: zoom 48s infinite 14s linear;
+
+}
+.slide4 {
+  transform-origin: 0 100%;
+	 animation: zoom 48s infinite 22s linear;
+
+}
+.slide5 {
+  transform-origin: 100% 0;
+	animation: zoom 48s infinite 30s linear;
+
+}
+.slide6 {
+  transform-origin: 0 0;
+	animation: zoom 48s infinite 38s linear;
+}
+@keyframes zoom {
+  0%, 17%  { z-index: 2; }
+	17, 100%  { z-index: 1; }
+
+	0%, 100% { transform: scale(1); opacity: 0; }
+	17%, 83% { transform: scale(1.2); }
+
+  4%, 17% { opacity: 1; }
+  34%, 83% { opacity: 0; }
+}
+@media (max-width: 600px) {
+	nav a {
+		font-size: smaller;
+		padding: 0 0.5em 0.25em;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	h1 .title {
+		font-size: 5rem;
+	}
+	h1 .author {
+		font-size: 3rem;
+		white-space: nowrap;
+	}
+	#contact div {
+		width: calc(100% - 8em);
+		max-width: 24em;
+		margin-top: 3em;
+		min-height: calc(100% - 8em)
+	}
+	nav a:last-child {
+		float: none;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	nav {
+		background: rgba(0, 0, 0, 0.75);
+	}
+	nav a {
+		color: #fff;
+	}
+	#contact div {
+		background: rgba(0, 0, 0, 0.75);
+		border-color: #000;
+		color: #fff;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	[class^="slide"] {
+		animation: none;
+	}
+	h1,
+	.group {
+		transition: opacity 0s;
+	}
+}
+@media (prefers-reduced-transparency: reduce) {
+	h1,
+	h1 .title,
+	h1 span {
+		opacity: 1;
+	}
+	#contact div,
+	nav {
+		background: #fff;
+	}
+}
+@media (prefers-reduced-transparency: reduce) and (prefers-color-scheme: dark) {
+	#contact div,
+	nav {
+		background: #000;
+	}
+}
