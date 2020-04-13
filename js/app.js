@@ -1,7 +1,7 @@
 const toggleActive = id => {
   let els = [
-    document.querySelectorAll('[role="navigation"] a'),
-    document.querySelectorAll('[role="region"]')
+    document.querySelectorAll('nav a'),
+    document.querySelectorAll('.group')
     ]
   els.forEach(nl => {
     nl.forEach(el => {
@@ -10,7 +10,7 @@ const toggleActive = id => {
   })
   let c = [
     document.querySelector(`[href="#${id}"]`),
-    document.querySelector(`[aria-label="${id}"]`)
+    document.querySelector(`[id="${id}"]`)
   ]
   let h = document.getElementsByTagName('h1')[0]
   c.forEach(el => {

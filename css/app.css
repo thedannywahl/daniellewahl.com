@@ -12,7 +12,7 @@ section {
 	align-items: center;
 	height: 100vh;
 }
-[role="region"] {
+.group {
   opacity: 0;
   position: fixed;
 	top: 0;
@@ -37,22 +37,24 @@ h1 {
 h1 span {
 	opacity: 0.66;
 }
-h1 .title {
+.title {
 	color: rgb(244, 68, 175);
 	font-family: 'Great Vibes', serif;
-	font-size: 6rem;
 	text-transform: capitalize;
+}
+h1 .title {
+	font-size: 6rem;
 	opacity: 0.85;
 }
 h1 .author {
 	font-size: 4rem;
 }
-[aria-label="contact"] {
+#contact {
 	height: calc(100% - 4.5em);
 	z-index: 1;
 	visibility: hidden;
 }
-[aria-label="contact"] div {
+#contact div {
 	max-width: 28em;
 	background: rgba(255, 255, 255, 0.75);
 	margin: 8em auto 0;
@@ -63,30 +65,28 @@ h1 .author {
 	overflow-y: scroll;
 	padding: 1em;
 }
-[aria-label="contact"] a {
+#contact a {
 	color: rgb(156, 181, 229);
 	text-decoration: none;
 }
-[aria-label="contact"] a:hover,
-[aria-label="contact"] a:focus,
-[aria-label="contact"] a:active {
+#contact a:hover,
+#contact a:focus,
+#contact a:active {
 	border-bottom: 1px dashed currentColor;
 }
-[aria-label="contact"] ul {
+#contact ul {
 	list-style: none outside none;
 	border-top: 1px dashed #ddd;
 	border-bottom: 1px dashed #ddd;
 	padding: 1em 0;
 }
-[aria-label="contact"] li {
+#contact li {
 	line-height: 1.75em;
 }
 h2 {
 	font-weight: 400;
 }
 h2 .title {
-	color: rgb(244, 68, 175);
-	font-family: 'Great Vibes', serif;
 	font-size: 1.55em;
 }
 .copy {
@@ -101,7 +101,7 @@ nav {
 	margin: 0;
 	clear: both;
 }
-[role="menuitem"] {
+nav a {
 	display: inline-block;
 	padding: 0 1em 0.5em;
 	text-decoration: none;
@@ -112,20 +112,20 @@ nav {
 	text-transform: uppercase;
 	border-top: 0.5em solid transparent;
 }
-[role="menuitem"]:hover,
-[role="menuitem"]:focus {
+nav a:hover,
+nav a:focus {
 	border-top-color: rgb(244, 68, 175);
 }
-[role="menuitem"]:active,
-[role="menuitem"].active {
+nav a:active,
+nav a.active {
   border-top-color: rgb(156, 181, 229)
 }
-[role="menuitem"]:last-child {
+nav a:last-child {
 	float: right;
 }
 .active {
 	opacity: 1;
-	visibility: visible;
+	visibility: visible!important;
 }
 
 [class^="slide"] {
@@ -187,7 +187,7 @@ nav {
   34%, 83% { opacity: 0; }
 }
 @media (max-width: 600px) {
-	[role="menuitem"] {
+	nav a {
 		font-size: smaller;
 		padding: 0 0.5em 0.25em;
 	}
@@ -201,13 +201,13 @@ nav {
 		font-size: 3rem;
 		white-space: nowrap;
 	}
-	[aria-label="contact"] div {
+	#contact div {
 		width: calc(100% - 8em);
 		max-width: 24em;
 		margin-top: 3em;
 		min-height: calc(100% - 8em)
 	}
-	[role="menuitem"]:last-child {
+	nav a:last-child {
 		float: none;
 	}
 }
@@ -215,10 +215,10 @@ nav {
 	nav {
 		background: rgba(0, 0, 0, 0.75);
 	}
-	[role="menuitem"] {
+	nav a {
 		color: #fff;
 	}
-	[aria-label="contact"] div {
+	#contact div {
 		background: rgba(0, 0, 0, 0.75);
 		border-color: #000;
 		color: #fff;
@@ -229,7 +229,7 @@ nav {
 		animation: none;
 	}
 	h1,
-	[role="region"] {
+	.group {
 		transition: opacity 0s;
 	}
 }
@@ -239,13 +239,13 @@ nav {
 	h1 span {
 		opacity: 1;
 	}
-	[aria-label="contact"] div,
+	#contact div,
 	nav {
 		background: #fff;
 	}
 }
 @media (prefers-reduced-transparency: reduce) and (prefers-color-scheme: dark) {
-	[aria-label="contact"] div,
+	#contact div,
 	nav {
 		background: #000;
 	}
