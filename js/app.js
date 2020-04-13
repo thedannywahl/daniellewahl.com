@@ -9,7 +9,7 @@ const toggleActive = id => {
     })
   })
   let c = [
-    document.getElementById(id),
+    document.querySelector(`[href="#${id}"]`),
     document.querySelector(`[aria-label="${id}"]`)
   ]
   let h = document.getElementsByTagName('h1')[0]
@@ -26,4 +26,5 @@ const toggleActive = id => {
   document.getElementsByClassName('title')[0].innerHTML = t
   document.title = `${t.charAt(0).toUpperCase() + t.slice(1)} by Danielle Wahl`
 }
-if(document.location.href.split('#')[1] !== undefined) toggleActive(dl)
+let u = document.location.href.split('#')[1]
+if(u !== undefined) toggleActive(u)
