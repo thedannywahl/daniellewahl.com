@@ -3,8 +3,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
-	background: linear-gradient(60deg, rgb(242,231,229) 0%, rgb(231,213,223) 65%, rgb(240,233,240) 100%);
-	background: url('../bg.full.jpg') no-repeat left top / cover;
+	background: rgb(231,213,223) url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/2wCEAAUEBAQEBAUEBAUHBQQFBwkHBQUHCQoICAkICAoNCgsLCwsKDQwMDA0MDAwPDxERDw8XFhYWFxkZGRkZGRkZGRkBBgYGCgkKFA0NFBYRDhEWGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGf/AABEIAAkADgMBEQACEQEDEQH/xABeAAEBAQAAAAAAAAAAAAAAAAABBAgQAAIBBAIDAAAAAAAAAAAAAAECAAMRIUESIjKB8AEBAQEAAAAAAAAAAAAAAAAAAgEDEQADAQEBAAAAAAAAAAAAAAAAAQIhMkH/2gAMAwEAAhEDEQA/ANUVAgPNTkYkUm01gKlJVINuxv7jDd6Sv4j7cSL4gr6hZhXR/9k=') top left / cover no-repeat;
 	font-family: 'Montserrat', sans-serif;
 }
 section {
