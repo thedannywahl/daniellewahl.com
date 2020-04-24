@@ -30,7 +30,6 @@ const toggleMeta = id => {
   let t = id === "boudoir" ? id : "photography"
   let els = document.querySelectorAll("meta[property^='og:']")
   for(let i = 0; i < els.length; i++) {
-    console.log(els[i].attributes.property.value)
     switch(els[i].attributes.property.value) {
       case 'og:title':
         els[i].content = `${t.charAt(0).toUpperCase() + t.slice(1)} by Danielle Wahl`
