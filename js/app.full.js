@@ -22,9 +22,39 @@ const toggleActive = id => {
     }
     el.classList.toggle('active')
   })
-  let t = id === "contact" ? "photography" : id
+  let t = id === "boudoir" ? id : "photography"
   document.getElementsByClassName('title')[0].innerHTML = t
   document.title = `${t.charAt(0).toUpperCase() + t.slice(1)} by Danielle Wahl`
 }
+const toggleMeta = id => {
+  let t = id === "boudoir" ? id : "photography"
+  let els = document.querySelectorAll('meta[property]')
+  for(let i = 0; i < els.length; i++) {
+    console.log(els[i].attributes.property.value)
+    switch(els[i].attributes.property.value) {
+      case 'og:title':
+        els[i].content = `${t.charAt(0).toUpperCase() + t.slice(1)} by Danielle Wahl`
+      break
+      case 'og:description':
+        let d = {
+          boudoir: "I'm a boudoir photographer in Utah. I'm passionate about helping women discover their beauty inside and out.",
+          photography: "I'm a photographer serving Utah and its surrounding areas. I'm passionate about boudoir, motherhood, and strong, confident women."
+        }
+        els[i].content = d[t]
+      break
+      case 'og:image':
+        els[i].content = `images/meta/${t}.jpg`
+      break
+      case 'og:url':
+        els[i].content = `https://daniellewahl.com/#${id}`
+      break
+    }
+  }
+}
+const toggle = id => {
+  toggleActive(id)
+  toggleMeta(id)
+  if(lazyLoadInstance) lazyLoadInstance.update()
+}
 let u = document.location.href.split('#')[1]
-if(u !== undefined) toggleActive(u)
+if(u !== undefined) toggle(u)

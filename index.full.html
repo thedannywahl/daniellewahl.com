@@ -3,13 +3,18 @@
 	<title>Photography by Danielle Wahl</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Photography by Danielle Wahl">
+	<meta property="og:description" content="I'm a photographer serving Utah and its surrounding areas. I'm passionate about boudoir, motherhood, and strong, confident women.">
+	<meta property="og:image" content="images/meta/photography.jpg">
+	<meta property="og:url" content="https://daniellewahl.com">
+	<meta name="twitter:card" content="summary_large_image">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes%7CMontserrat&display=swap&text=%24%0A%2527%252C%25C2%25A9.()-12345680abcdefghiklmnoprstuvwyABCDEHIMNOPRTUWY">
 	<link rel="stylesheet" href="css/app.full.css">
 	<nav>
-		<a href="#boudoir" onclick="toggleActive('boudoir');lazyLoadInstance.update()">Boudoir</a>
-		<a href="#maternity" onclick="toggleActive('maternity');lazyLoadInstance.update()">Maternity</a>
-		<a href="#portraiture" onclick="toggleActive('portraiture');lazyLoadInstance.update()">Portraiture</a>
-		<a href="#contact" onclick="toggleActive('contact');lazyLoadInstance.update()">Contact</a>
+		<a href="#boudoir" onclick="toggle('boudoir')">Boudoir</a>
+		<a href="#maternity" onclick="toggle('maternity')">Maternity</a>
+		<a href="#portraiture" onclick="toggle('portraiture')">Portraiture</a>
+		<a href="#contact" onclick="toggle('contact')">Contact</a>
 	</nav>
 	<section role="main">
 		<h1 class="active"><span class="title">Photography</span> <span>by</span> <span class="author">Danielle</span></h1>
@@ -124,7 +129,7 @@
 				<img src="#" loading="lazy" data-src="images/portraiture/portraiture06.jpg" alt="portraiture06">
 			</picture>
 	</ul>
-	<script async src="js/app.full.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.iife.js"></script>
 	<script>var lazyLoadInstance = new LazyLoad({elements_selector:".active img",use_native:true})</script>
+	<script async src="js/app.full.js"></script>
 </html>
