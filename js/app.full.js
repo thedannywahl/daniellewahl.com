@@ -28,7 +28,7 @@ const toggleActive = id => {
 }
 const toggleMeta = id => {
   let t = id === "boudoir" ? id : "photography"
-  let els = document.querySelectorAll('meta[property]')
+  let els = document.querySelectorAll("meta[property^='og:']")
   for(let i = 0; i < els.length; i++) {
     console.log(els[i].attributes.property.value)
     switch(els[i].attributes.property.value) {
