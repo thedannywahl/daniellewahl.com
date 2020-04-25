@@ -42,7 +42,7 @@ const toggleMeta = id => {
         els[i].content = d[t]
       break
       case 'og:image':
-        els[i].content = `images/meta/${t}.jpg`
+        els[i].content = `https://daniellewahl.com/images/meta/${t}.jpg`
       break
       case 'og:url':
         els[i].content = `https://daniellewahl.com/#${id}`
