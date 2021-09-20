@@ -61,7 +61,6 @@ h1 .author {
 	border-radius: 3px;
 	height: calc(100% - 24em);
 	min-height: calc(100% - 14em);
-	border: 3px solid #fff;
 	overflow-y: scroll;
 	padding: 1em;
 }
@@ -219,7 +218,6 @@ nav a:last-child {
 	}
 	#contact div {
 		background: rgba(0, 0, 0, 0.75);
-		border-color: #000;
 		color: #fff;
 	}
 }
